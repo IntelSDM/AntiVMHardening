@@ -16,7 +16,11 @@ bool IsVMThroughDisplays()
 			devicestring.find(L"VirtualBox Graphics Adapter") != std::wstring::npos ||
 			devicestring.find(L"Citrix Display Adapter") != std::wstring::npos ||
 			devicestring.find(L"Parallels Display Adapter") != std::wstring::npos ||
-			devicestring.find(L"Microsoft Remote Display Adapter") != std::wstring::npos)
+			devicestring.find(L"Microsoft Remote Display Adapter") != std::wstring::npos ||
+			devicestring.find(L"Microsoft Hyper-V Video") != std::wstring::npos ||
+			devicestring.find(L"Red Hat QXL Controller") != std::wstring::npos ||
+			devicestring.find(L"VirtIO GPU") != std::wstring::npos ||
+			devicestring.find(L"Bochs VGA Adapter") != std::wstring::npos)
 		{
 
 			printf("DeviceString: %ws\n", displayDevice.DeviceString);
